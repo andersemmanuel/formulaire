@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -26,6 +25,16 @@
             Vos informations
         </h2>
         <ul>
+             <?php
+             foreach($_POST as $key => $value){
+                if(empty($value)){
+                    print "<li> $key :valeur obligatoire </li>";
+
+                }else{
+                    print "<li> $key : valeur obligatoire <li>";
+             }
+        }
+            ?> 
                 </ul>
     </section>
         <fieldset>
